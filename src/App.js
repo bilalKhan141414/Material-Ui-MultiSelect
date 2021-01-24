@@ -24,6 +24,7 @@ function App() {
         <div className="infoContent">
           <p>
             Click on the select element and scroll down.
+            Checking Change
           </p>
         </div>
         <div
