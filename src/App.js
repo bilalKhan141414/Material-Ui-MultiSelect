@@ -21,6 +21,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="infoContent">
+          <p>
+            Click on the select element and scroll down.
+          </p>
+        </div>
         <div
             className={clsx("ASIN")}>
             <SelectAsync
@@ -35,22 +40,36 @@ function App() {
                 id="selectedOptions"
                 isDisabled={false}
                 isLoading={isLoading}
-                // menuIsOpen
             />
         </div>
         <div className="infoContent">
             <p>
-             <strong>Issue:</strong> Large Data in <code>react-select</code> fixed.
+              <strong>Issue was:</strong> Large Data in <code>react-select</code>.
             </p>
-            <a
-              className="App-link"
-              href="https://react-select.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React Select
-            </a>
-
+            <p>
+              And now the issue died.
+            </p>
+            <div>
+              <a
+                className="App-link"
+                href="https://react-select.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn React Select
+              </a>
+            </div>
+            <br/>
+            <div>
+              <a
+                className="App-link"
+                href="https://github.com/bilalKhan141414/React-Single-Select-Large-Data-Bug-Fix"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit My Git Hub Repo
+              </a>
+            </div>
         </div>
       </header>
     </div>

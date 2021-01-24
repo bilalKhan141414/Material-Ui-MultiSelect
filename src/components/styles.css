@@ -19,28 +19,59 @@
     padding:0 !important;
     outline:none !important;
 }
+.ASIN{
+    width:50%;
+}
 .LoadMoreButton{
-    cursor:pointer;
     display:flex;
     justify-content: space-around;
+    border-top: 1px solid #0000002e;
 }
 .LoadMoreButton > div {
     padding: 19px !important;
     width: 50%;
     text-align: center;
-    border-top: 1px solid #0000002e;
     color: #00000070;
 
 }
-.LoadMoreButton > div:hover{
+.LoadMoreButton > div:not(.paginationInfo):hover{
     background: #deebff;
-}
-.ASIN{
-    width:50%;
+    cursor:pointer;
 }
 .LoadMoreButton .prevCustom{
-    border-right: 1px solid #0000002e;
 }
 
 .LoadMoreButton .nextCustom{
+
+}
+.LoadMoreButton .paginationInfo{
+    border-right: 1px solid #0000002e;
+    border-left: 1px solid #0000002e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+.LoadMoreButton .paginationInfo > div{
+   flex:1;
+}
+.LoadMoreButton .paginationInfo > div:not(.current) > div:last-child{
+    font-size: 11px;
+}
+
+.mobile{
+    display:none;
+}
+@media only screen and (max-width: 600px) {
+    .LoadMoreButton .paginationInfo .total, .LoadMoreButton .paginationInfo .last {
+        display:none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .mobile{
+        display:block;
+    }
+    .desktop{
+        display:none;
+    }
 }
